@@ -15,14 +15,14 @@ const alertSome = (list: Array<number>) => {
     <!-- data  Array -->
     <!--  v-slot:footer 是否要底部自定义信息 默认空-->
     <!--  @onSection  事件 返回一个数组,数组里面是选中的最小值和最最大值-->
-    <!-- <zxh-age Mtitle="你希望他的年龄" Stitle="区间" icon="fa fa-arrows-h" :data="arr" >
+    <zxh-age>
       <template v-slot:footer>
         <div> 为了打造100%真实的交友平台，请如实填写资料，不真实的资料审核将会被拒绝。</div>
       </template>
-    </zxh-age> -->
-    <!-- 默认标签 -->
-    <zxh-age @onSection="alertSome">
     </zxh-age>
+    <!-- 默认标签 -->
+    <!-- <zxh-age @onSection="alertSome">
+    </zxh-age> -->
   </div>
 
 </template>
