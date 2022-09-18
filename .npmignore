@@ -1,0 +1,8 @@
+#忽略目录
+node_modules
+public
+src
+
+# Editor directories and files
+.vscode/*
+vite.config.ts

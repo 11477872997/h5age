@@ -1,6 +1,12 @@
 ```
 npm install h5age
 ```
+##引入 main.js
+```
+import h5Age from "h5age";
+import "h5age/dist/style.css";
+app.use(h5Age)
+```
 
 ## API
 
