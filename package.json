@@ -1,0 +1,38 @@
+{
+  "name": "h5age",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/zxh.umd.js",
+  "module": "./dist/zxh.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/zxh.es.js",
+      "require": "./dist/zxh.umd.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "author": {
+    "name": "zxh-robert"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "sass": "^1.54.9",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vue-tsc": "^0.40.4"
+  }
+}
