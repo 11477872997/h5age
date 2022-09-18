@@ -7,7 +7,9 @@ import h5Age from "h5age";
 import "h5age/dist/style.css";
 app.use(h5Age)
 ```
-
+<p align="center">
+ <img src="https://github.com/11477872997/h5age/blob/main/public/bg.png" alt="npm version" />
+</p>
 ## API
 
 | 参数| 说明 |类型|默认值|
