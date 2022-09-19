@@ -124,7 +124,7 @@ $Color_bg: rgb(65, 210, 208);
 $Color_ff: #fff;
 
 .alet {
-    line-height: 2em;
+    line-height: .8533rem;
     color: $Color;
 }
 
@@ -140,31 +140,31 @@ $Color_ff: #fff;
 }
 
 .btn {
-    min-width: 40px;
-    height: 40px;
-    border-radius: 20px;
+    min-width: 1.0667rem;
+    height: 1.9rem;
+    border-radius: .5333rem;
     text-align: center;
-    line-height: 3em;
+    line-height: 1.8533rem;
     background: $Color_ff;
-    margin: 5px;
+    margin: .2rem;
     // 放大 缩放 ,尺寸
     // flex-grow: 0;
     // flex-shrink: 0;
     // flex-basis: 20%;
-    flex: 0 0 17%;
+    flex: 0 0 18%;
 }
 
 .zxh-age {
     width: 100vw;
     height: 100vh;
     display: flex;
-    font-size: 12px;
+    font-size: .32rem;
     background: rgb(243, 245, 246);
     flex-direction: column;
     justify-content: space-between;
 
     &_header {
-        padding-top: .8rem;
+        padding-top: .5333rem;
         text-align: center;
 
         .zxh-age_title {
@@ -173,7 +173,7 @@ $Color_ff: #fff;
         }
 
         span {
-            font-size: .8rem;
+            line-height: 1.8533rem;
             text-align: center;
             display: inline-block;
             margin-top: 5px;
@@ -200,7 +200,7 @@ $Color_ff: #fff;
         .zxh-age_list {
             display: flex;
             flex-wrap: wrap;
-
+            padding-top: .8rem;
             .zxh-age-btn {
                 @extend .btn;
             }
@@ -210,8 +210,8 @@ $Color_ff: #fff;
             font-size: 1.5rem;
             color: $Color_bg;
             text-align: center;
-            line-height: 2em;
-            margin: 0 20px;
+            line-height: 1.8533rem;
+            margin: 0 1.6rem;
         }
     }
 

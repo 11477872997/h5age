@@ -1,6 +1,6 @@
 import { App } from 'vue'
 import Age from './age/age.vue'
-
+import 'font-awesome/css/font-awesome.min.css'
 const components = [
     Age
 ]
