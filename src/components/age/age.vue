@@ -48,6 +48,27 @@ const props = defineProps({
         default: 'fa fa-arrows-h',
         required: false
     },
+    color: {
+        type: String,
+        default: '#41d2d0',
+        required: false
+    },
+    width: {
+        type: String,
+        default: '17%',
+        required: false
+    },
+    height: {
+        type: String,
+        default: '40px',
+        required: false
+    },
+    iconColor: {
+        type: String,
+        default: '#41d2d0',
+        required: false
+    },
+ 
     isReset: {
         type: Boolean,
         default: true,
@@ -105,6 +126,7 @@ watch(() => [min.value, max.value], (newValue, oldValue) => {
     emit('onSection', newValue);
 });
 
+
 </script>
 <script lang="ts">
 // 默认值
@@ -118,62 +140,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$Color: rgb(176, 175, 169);
+$Color: #b0afa9;
 $Color_border: #ccc;
-$Color_bg: rgb(65, 210, 208);
+$Color_bg: v-bind('color');
+$iconColor: v-bind('iconColor');
 $Color_ff: #fff;
 
 .alet {
-    line-height: .8533rem;
     color: $Color;
 }
-
+// 选中按钮颜色
 .act {
     background: $Color_bg !important;
     color: $Color_ff ;
 }
-
+// 选中按钮区间颜色
 .actlist {
     background: $Color_bg !important;
     color: $Color_ff ;
     opacity: 0.5;
 }
-
+// 按钮颜色
 .btn {
-    min-width: 1.0667rem;
-    height: 1.9rem;
-    border-radius: .5333rem;
+    cursor: pointer;
+    width: v-bind('width');
+    height: v-bind('height');
+    border-radius: 10px;
     text-align: center;
-    line-height: 1.8533rem;
+    line-height: v-bind('height');
     background: $Color_ff;
-    margin: .2rem;
-    // 放大 缩放 ,尺寸
-    // flex-grow: 0;
-    // flex-shrink: 0;
-    // flex-basis: 20%;
-    flex: 0 0 18%;
+    margin: 5px;
 }
 
 .zxh-age {
-    width: 100vw;
-    height: 100vh;
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
     display: flex;
-    font-size: .32rem;
+    font-size: 12px;
     background: rgb(243, 245, 246);
     flex-direction: column;
-    justify-content: space-between;
-
     &_header {
-        padding-top: .5333rem;
+        position: relative;
+        padding-top:20px;
         text-align: center;
-
         .zxh-age_title {
-            font-size: 1.3rem;
-            line-height: 1.5em;
+            font-size: 22px;
+            line-height: 22px;
         }
-
         span {
-            line-height: 1.8533rem;
             text-align: center;
             display: inline-block;
             margin-top: 5px;
@@ -181,46 +196,40 @@ $Color_ff: #fff;
         }
     }
 
-
-
     &_mian {
+        position:relative;
         flex: 1;
-        padding: 1rem;
-
+        padding:10px;
         .zxh-age_section {
             display: flex;
             justify-content: center;
-
             .zxh-age-min,
             .zxh-age-max {
                 @extend .btn;
             }
         }
-
         .zxh-age_list {
             display: flex;
             flex-wrap: wrap;
-            padding-top: .8rem;
+            padding-top: 30px;
+            justify-content: center;
             .zxh-age-btn {
                 @extend .btn;
             }
         }
-
         .zxh-age-icon {
-            font-size: 1.5rem;
-            color: $Color_bg;
+            position:relative;
+            font-size: 12px;
+            color: $iconColor;
             text-align: center;
-            line-height: 1.8533rem;
-            margin: 0 1.6rem;
+            line-height: 20px;
+            margin: 12px;
         }
     }
-
     &_footer {
         @extend .alet;
-        padding: .5rem 1.5rem;
-        font-size: .6rem;
-        text-align: left;
-        height: 5rem;
+        padding: 10px;
+        font-size:12px;
     }
 }
 </style>

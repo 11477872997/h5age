@@ -16,6 +16,10 @@ app.use(h5Age)
 | --- | --- |--- |--- |
 | Mtitle |大标题|string |你期望ta的年龄 |
 | Stitle |小标题|string |选择范围 |
+| color |按钮颜色|string |#41d2d0 |
+| iconColor |图标颜色|string |#41d2d0 |
+| windth |按钮宽度|string |17% |
+| height |按钮高度度|string |40px |
 | icon |图标:使用是font-awesome(https://fontawesome.dashgame.com/) 图标库 |string |选择范围 |fa fa-arrows-h
 | isReset |不限|Boolean |true |
 | v-slot:footer | 是否要底部自定义信息|--- |--- |
